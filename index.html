@@ -221,7 +221,7 @@ a:hover{color:var(--blue)}
   <section id="numbers" style="scroll-margin-top:80px;padding:clamp(70px,9vw,130px) clamp(20px,5vw,64px);background:var(--dark);color:#fff">
     <div style="max-width:1200px;margin:0 auto">
       <div data-reveal="" style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--peri2);margin-bottom:44px;text-align:center">{{ c.numbersKicker }}</div>
-      <div data-numgrid="" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden">
+      <div data-numgrid="" style="display:grid;grid-template-columns:1fr;gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden">
         <sc-for list="{{ c.numbers }}" as="n" hint-placeholder-count="8">
           <div data-reveal="" style="background:var(--dark);padding:34px 22px;text-align:center;display:flex;flex-direction:column;gap:10px">
             <div style="font-weight:400;font-size:clamp(30px,3.2vw,44px);letter-spacing:-.01em;color:var(--orange)">{{ n.v }}</div>
@@ -231,7 +231,7 @@ a:hover{color:var(--blue)}
       </div>
 
       <div data-reveal="" style="margin-top:clamp(64px,7vw,96px);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--peri2);margin-bottom:38px;text-align:center">{{ c.timelineKicker }}</div>
-      <div data-cols="repeat(5,1fr)" style="display:grid;grid-template-columns:1fr;gap:0 26px">
+      <div data-cols="repeat(4,1fr)" style="display:grid;grid-template-columns:1fr;gap:0 26px">
         <sc-for list="{{ c.timeline }}" as="t" hint-placeholder-count="5">
           <div data-reveal="" style="position:relative;border-top:1px solid rgba(255,255,255,.22);padding:26px 0 26px 0">
             <div style="position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--orange)"></div>
@@ -322,6 +322,10 @@ a:hover{color:var(--blue)}
       <div data-reveal="" style="margin-bottom:44px">
         <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin-bottom:16px">{{ archiveLabel }}</div>
         <div style="display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7359203438863224833" target="_blank" rel="noopener" style="background:var(--panel);padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;gap:20px;text-decoration:none;transition:background .25s" style-hover="background:color-mix(in srgb,var(--panel) 88%,var(--orange))">
+            <span style="font-size:15px;line-height:1.5;color:var(--orange)">{{ featuredT }}</span>
+            <span style="font-size:12px;color:var(--orange);white-space:nowrap">{{ featuredD }}</span>
+          </a>
           <sc-for list="{{ archiveGroups }}" as="g" hint-placeholder-count="3">
             <div style="background:var(--panel)">
               <div onClick="{{ g.toggle }}" style="padding:18px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;transition:background .25s" style-hover="background:color-mix(in srgb,var(--panel) 88%,var(--peri))">
@@ -462,7 +466,7 @@ class Component extends DCLogic {
       heroCta1:'Scopri la piattaforma', heroCta2:'Parla con noi', scroll:'Scorri',
 
       aboutKicker:'Chi siamo',
-      aboutTitle:'L’esperienza nel gas naturale che diventa metodo per il biometano',
+      aboutTitle:'L’esperienza nel gas naturale diventa metodo per il biometano',
       aboutBody1:'Fiordaliso Business Development nasce venerdì 17 gennaio 2020 come ditta individuale dedita alla consulenza, compimento di un percorso di quindici anni nel mercato del gas naturale presso primari operatori del settore quali ENGIE, OMV, Ezpada. Muove i primi passi nell’ambito del Gas Naturale Liquefatto Small Scale, poi il Biometano liquido, infine il Biometano: l’analisi del settore ha da subito evidenziato varie criticità, mancando innanzitutto un vero e proprio mercato.',
       aboutBridge:'Fiordaliso è quindi il “ponte” che unisce le “due rive del fiume”, cioè la produzione del biometano e il suo utilizzo.',
 
@@ -526,11 +530,10 @@ class Component extends DCLogic {
       ],
       timelineKicker:'La nostra evoluzione',
       timeline:[
-        {y:'2020', e:['Fondazione, Studio della normativa, analisi del mercato, partecipazione a fiere, contatti con i principali operatori']},
+        {y:'2020', e:['Fondazione, studio della normativa, analisi del mercato, partecipazione a fiere, contatti con i principali operatori']},
         {y:'2023', e:['Prima gara']},
         {y:'2024', e:['Docente all’interno di corsi dedicati al mercato del biometano']},
-        {y:'2025', e:['Prima community italiana del mercato del biometano','Report di 20 pagine sul biometano, ad oggi l’unico esistente']},
-        {y:'2026', e:['Nascita Fiordaliso Business Development S.r.l.']}
+        {y:'2025', e:['Prima community italiana del mercato del biometano','Report di 20 pagine sul biometano, ad oggi l’unico esistente']}
       ],
 
       beyondKicker:'Altri servizi',
@@ -671,8 +674,7 @@ class Component extends DCLogic {
         {y:'2020', e:['Founded; study of the regulatory framework, market analysis, trade-fair attendance, contacts with the main operators']},
         {y:'2023', e:['First tender']},
         {y:'2024', e:['Lecturer in courses dedicated to the biomethane market']},
-        {y:'2025', e:['First Italian biomethane-market community','20-page report on biomethane — to date the only one']},
-        {y:'2026', e:['Fiordaliso Business Development S.r.l. established']}
+        {y:'2025', e:['First Italian biomethane-market community','20-page report on biomethane — to date the only one']}
       ],
 
       beyondKicker:'Other services',
@@ -763,6 +765,7 @@ class Component extends DCLogic {
     this._fallback = setTimeout(() => els.forEach(el => el.setAttribute('data-shown', '')), 4000);
 
     this._mq = window.matchMedia('(min-width: 880px)');
+    this._mqMid = window.matchMedia('(min-width: 560px)');
     this._applyMq = () => {
       const wide = this._mq.matches;
       const nav = root.querySelector('[data-navlinks]');
@@ -771,10 +774,11 @@ class Component extends DCLogic {
         g.style.gridTemplateColumns = wide ? g.getAttribute('data-cols') : '1fr';
       });
       const ng = root.querySelector('[data-numgrid]');
-      if (ng) ng.style.gridTemplateColumns = 'repeat(' + (wide ? 3 : 2) + ',1fr)';
+      if (ng) ng.style.gridTemplateColumns = 'repeat(' + (wide ? 3 : (this._mqMid.matches ? 2 : 1)) + ',1fr)';
     };
     this._applyMq();
     this._mq.addEventListener('change', this._applyMq);
+    this._mqMid.addEventListener('change', this._applyMq);
 
     this._onKey = (e) => { if (e.key === 'Escape' && this.state.modal) this.closeModal(); };
     window.addEventListener('keydown', this._onKey);
@@ -782,6 +786,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     clearTimeout(this._fallback);
     if (this._mq && this._applyMq) this._mq.removeEventListener('change', this._applyMq);
+    if (this._mqMid && this._applyMq) this._mqMid.removeEventListener('change', this._applyMq);
     if (this._onKey) window.removeEventListener('keydown', this._onKey);
     document.body.style.overflow = '';
   }
@@ -803,25 +808,36 @@ class Component extends DCLogic {
       {t:'1 — «Biometano DM22: Tariffa Omnicomprensiva o Tariffa Premio?»', d:'11 mar 2025', href:'https://www.linkedin.com/posts/tomas-carini_biometano-tariffa-omnicomprensiva-o-tariffa-activity-7305140617980870657-78wb'},
       {t:'0 — Presentazione della rubrica', d:'4 mar 2025', href:'https://lnkd.in/dSJFYCVi'}
     ]},
+    { g:'Rubrica «Protagonisti, aziende e analisi del mercato del biometano»', gEn:'Column “Protagonists, companies and biomethane market analysis”', items:[
+      {t:'7 — «Intervista a Laura Brida di Eco8»', tEn:'7 — “Interview with Laura Brida of Eco8”', d:'12 mag 2026', href:'https://www.linkedin.com/posts/fiordaliso-business-development_biometano-bpa-dm22-activity-7459976154188320768-lQ7p'},
+      {t:'6 — «Aste biometano»', tEn:'6 — “Biomethane auctions”', d:'19 dic 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7417516260177043456'},
+      {t:'5 — «Ecomondo»', tEn:'5 — “Ecomondo”', d:'11 nov 2025', href:'https://www.linkedin.com/feed/update/urn:li:share:7393931204200321024'},
+      {t:'4 — «Oil&NonOil»', tEn:'4 — “Oil&NonOil”', d:'30 ott 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7388870130883186688'},
+      {t:'3 — «Andion»', tEn:'3 — “Andion”', d:'14 ott 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7383843688075948033'},
+      {t:'2 — «Prima gara biometano: l\'Industria Fedrigoni»', tEn:'2 — “First biomethane tender: Fedrigoni industry”', d:'30 set 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7378714590903156737'},
+      {t:'1 — «Prima gara biometano: il produttore CH1»', tEn:'1 — “First biomethane tender: the producer CH1”', d:'16 set 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7373664503953088515'}
+    ]},
     { g:'Interviste e docenze', gEn:'Interviews & teaching', items:[
       {t:'Docenza IKN — Formazione Energy 2026', d:'2026', href:'https://www.linkedin.com/posts/tomas-carini_formazione-energy-2026-share-7470401808948170752-rGd8'},
-      {t:'Intervista a Enza Tedesco sulle aste GSE', d:'2026', href:'https://www.linkedin.com/posts/fiordaliso-business-development_montelenzatedescointerview20260609-activity-7470144734368399360-6cI6'},
-      {t:'Intervista a Laura Brida sull’art. 7', d:'12 mag 2026', href:'https://www.linkedin.com/posts/fiordaliso-business-development_biometano-bpa-dm22-activity-7459976154188320768-lQ7p'},
-      {t:'«La Socratica del business» n. 137', d:'12 gen 2026', href:'https://www.linkedin.com/feed/update/urn:li:activity:7416401430573662208'},
+      {t:'Intervista di Enza Tedesco di Montel sulle aste GSE', d:'2026', href:'https://www.linkedin.com/posts/fiordaliso-business-development_montelenzatedescointerview20260609-activity-7470144734368399360-6cI6'},
+      {t:'Intervista di Claudio Beretta, Rubrica "La Socratica del Business" n. 137', d:'12 gen 2026', href:'https://www.linkedin.com/feed/update/urn:li:activity:7416401430573662208'},
       {t:'«La Socratica del business» n. 137 — podcast', d:'12 gen 2026', href:'https://www.spreaker.com/episode/137-il-viaggio-di-tomas-carini-il-personal-trainer-del-biometano-quando-l-energia-diventa-relazione-pensiero-mercato-e-biometano--69193102'}
     ]},
     { g:'Eventi, aste e collaborazioni', gEn:'Events, auctions & partnerships', items:[
       {t:'Webinar', d:'26 feb 2026', href:'https://www.linkedin.com/feed/update/urn:li:activity:7433110587355779073'},
-      {t:'Aste biometano 6–15 gennaio 2026', d:'19 dic 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7417516260177043456'},
-      {t:'Report offerte Enelab — gennaio 2026', d:'9 gen 2026', href:'https://www.linkedin.com/posts/enelab_report-offerte-gennaio-2026-activity-7415345666949812224-N7LG'},
-      {t:'Ecomondo', d:'11 nov 2025', href:'https://www.linkedin.com/feed/update/urn:li:share:7393931204200321024'},
-      {t:'Oil&NonOil', d:'30 ott 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7388870130883186688'},
-      {t:'Andion', d:'14 ott 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7383843688075948033'},
-      {t:'Fedrigoni', d:'30 set 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7378714590903156737'},
-      {t:'CH1', d:'16 set 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7373664503953088515'},
-      {t:'Conclusione della prima gara CH1–Fedrigoni', d:'7 ago 2025', href:'https://www.linkedin.com/feed/update/urn:li:activity:7359203438863224833'}
+      {t:'Report offerte Enelab — gennaio 2026', d:'9 gen 2026', href:'https://www.linkedin.com/posts/enelab_report-offerte-gennaio-2026-activity-7415345666949812224-N7LG'}
     ]}
   ];
+
+  MONTHS_EN = { gen:'Jan', feb:'Feb', mar:'Mar', apr:'Apr', mag:'May', giu:'Jun', lug:'Jul', ago:'Aug', set:'Sep', ott:'Oct', nov:'Nov', dic:'Dec' };
+
+  locDate(d, lang) {
+    if (lang === 'it') return d;
+    const m = /^(\d{1,2}) ([a-z]{3}) (\d{4})$/.exec(d);
+    if (!m) return d;
+    const mon = this.MONTHS_EN[m[2]];
+    return mon ? mon + ' ' + m[1] + ', ' + m[3] : d;
+  }
 
   renderVals() {
     const lang = this.state.lang;
@@ -831,7 +847,7 @@ class Component extends DCLogic {
     for (let i = 0; i < 12; i++) petalsInner.push({ rot: (i * 30 + 15) + 'deg', delay: (0.55 + i * 0.05).toFixed(2) + 's' });
     const archiveGroups = this.ARCHIVE.map((grp, i) => ({
       g: lang === 'it' ? grp.g : grp.gEn,
-      items: grp.items,
+      items: grp.items.map(it => ({ t: lang === 'it' ? it.t : (it.tEn || it.t), d: this.locDate(it.d, lang), href: it.href })),
       count: String(grp.items.length),
       open: !!this.state.openArch[i],
       sign: this.state.openArch[i] ? '\u2212' : '+',
@@ -839,6 +855,8 @@ class Component extends DCLogic {
     }));
     return {
       c, lang, archiveGroups,
+      featuredD: lang === 'it' ? '7 ago 2025' : 'Aug 7, 2025',
+      featuredT: lang === 'it' ? 'Conclusione della prima gara CH1\u2013Fedrigoni' : 'Conclusion of the first CH1\u2013Fedrigoni tender',
       archiveLabel: lang === 'it' ? 'Archivio pubblicazioni' : 'Publications archive',
       flipFounder: this.flipFounder,
       founderFlipStyle: 'position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.4,.05,.2,1);transform:rotateY(' + (this.state.founderFlipped ? 180 : 0) + 'deg)',
