@@ -47,7 +47,7 @@ a:hover{color:var(--blue)}
     <div style="display:none;align-items:center;gap:28px" data-navlinks="">
       <a href="#about" style="color:var(--ink2);font-size:14px;letter-spacing:.01em;transition:color .25s" style-hover="color:var(--ink)">{{ c.nav.about }}</a>
       <a href="#values" style="color:var(--ink2);font-size:14px;transition:color .25s" style-hover="color:var(--ink)">{{ c.nav.values }}</a>
-      <a href="#gare" style="color:var(--ink2);font-size:14px;transition:color .25s" style-hover="color:var(--ink)">{{ c.nav.platform }}</a>
+      <a href="#platform" style="color:var(--ink2);font-size:14px;transition:color .25s" style-hover="color:var(--ink)">{{ c.nav.platform }}</a>
       <a href="#numbers" style="color:var(--ink2);font-size:14px;transition:color .25s" style-hover="color:var(--ink)">{{ c.nav.numbers }}</a>
       <a href="#founder" style="color:var(--ink2);font-size:14px;transition:color .25s" style-hover="color:var(--ink)">{{ c.nav.founder }}</a>
     </div>
@@ -86,7 +86,7 @@ a:hover{color:var(--blue)}
         <h1 data-reveal="" data-delay="80" style="font-weight:400;font-size:clamp(38px,6vw,84px);line-height:1.03;letter-spacing:-.015em;margin-bottom:30px;text-wrap:balance;color:var(--orange)">{{ c.heroTitle }}</h1>
         <p data-reveal="" data-delay="160" style="font-size:clamp(17px,1.6vw,22px);line-height:1.6;color:var(--ink2);max-width:660px;margin-bottom:40px">{{ c.heroSub }}</p>
         <div data-reveal="" data-delay="240" style="display:flex;flex-wrap:wrap;gap:14px">
-          <a href="#gare" style="background:var(--orange);color:#fff;font-size:16px;padding:16px 30px;border-radius:999px;box-shadow:0 14px 40px -14px var(--orange);transition:transform .25s" style-hover="transform:translateY(-3px);color:#fff">{{ c.heroCta1 }}</a>
+          <a href="#platform" style="background:var(--orange);color:#fff;font-size:16px;padding:16px 30px;border-radius:999px;box-shadow:0 14px 40px -14px var(--orange);transition:transform .25s" style-hover="transform:translateY(-3px);color:#fff">{{ c.heroCta1 }}</a>
           <a href="#contact" style="border:1px solid var(--line);color:var(--ink);font-size:16px;padding:16px 30px;border-radius:999px;transition:border-color .25s,transform .25s" style-hover="border-color:var(--peri);transform:translateY(-3px);color:var(--ink)">{{ c.heroCta2 }}</a>
         </div>
       </div>
@@ -144,8 +144,8 @@ a:hover{color:var(--blue)}
     </div>
   </section>
 
-  <!-- LE GARE -->
-  <section id="gare" style="scroll-margin-top:80px;padding:clamp(80px,11vw,150px) clamp(20px,5vw,64px);background:var(--bg2);border-top:1px solid var(--line)">
+  <!-- LA PIATTAFORMA -->
+  <section id="platform" style="scroll-margin-top:80px;padding:clamp(80px,11vw,150px) clamp(20px,5vw,64px);background:var(--bg2);border-top:1px solid var(--line)">
     <div style="max-width:1200px;margin:0 auto">
       <div data-reveal="" style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:26px">{{ c.platformKicker }}</div>
       <h2 data-reveal="" data-delay="80" style="font-weight:400;font-size:clamp(28px,4vw,54px);line-height:1.08;letter-spacing:-.015em;margin-bottom:32px;text-wrap:balance;max-width:820px">{{ c.platformTitle }}</h2>
@@ -247,7 +247,7 @@ a:hover{color:var(--blue)}
     </div>
   </section>
 
-  <!-- ALTRI SERVIZI -->
+  <!-- OLTRE LA PIATTAFORMA -->
   <section id="beyond" style="scroll-margin-top:80px;padding:clamp(80px,11vw,140px) clamp(20px,5vw,64px)">
     <div style="max-width:1000px;margin:0 auto">
       <div data-reveal="" style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:26px">{{ c.beyondKicker }}</div>
@@ -459,11 +459,11 @@ class Component extends DCLogic {
 
   C = {
     it: {
-      nav: { about:'Chi siamo', values:'Valori', platform:'Le gare', numbers:'Numeri', founder:'Founder', contact:'Contatti' },
+      nav: { about:'Chi siamo', values:'Valori', platform:'Piattaforma', numbers:'Numeri', founder:'Founder', contact:'Contatti' },
       heroEyebrow:'Fiordaliso Business Development',
-      heroTitle:'Portiamo il biometano in gara',
+      heroTitle:'Le gare biometano si evolvono in piattaforma',
       heroSub:'Vent’anni di esperienza nel gas naturale e cinque nel biometano, al servizio degli operatori di mercato. Dalla creazione del bando alla chiusura della gara, ogni offerta segue un percorso ordinato, trasparente e protetto. Produttori e Acquirenti vengono assistiti in ogni tappa del percorso.',
-      heroCta1:'Scopri le gare', heroCta2:'Parla con noi', scroll:'Scorri',
+      heroCta1:'Scopri la piattaforma', heroCta2:'Parla con noi', scroll:'Scorri',
 
       aboutKicker:'Chi siamo',
       aboutTitle:'L’esperienza nel gas naturale diventa metodo per il biometano',
@@ -484,9 +484,9 @@ class Component extends DCLogic {
       whyBody2:'La scelta del nome Fiordaliso risponde quindi a due pulsioni: il piacere di richiamare la presenza affettiva dei nonni e la ferma volontà di replicare quell’esperienza imprenditoriale di successo, anche in questo caso cominciando dal nulla e basandosi solo sulle proprie intuizioni, determinazione e costanza.',
       whyCaption:'L’albergo Fiordaliso — Bardolino (VR), Lago di Garda.',
 
-      platformKicker:'Le gare',
+      platformKicker:'La piattaforma',
       platformTitle:'La vendita del biometano diventa una gara strutturata',
-      platformBody1:'Le gare biometano sono l’assoluta novità del settore: dal 2023 sono la soluzione concreta per chi investe in un impianto di biometano e vuole trovare il miglior cliente sul mercato. Dopo l’ottimo riscontro da parte degli operatori, abbiamo deciso di investire per offrire un servizio migliore che garantisca liquidità, affidabilità ed efficienza, nonché terzietà, scalabilità, autonomia ed accessibilità.',
+      platformBody1:'Le gare biometano sono l’assoluta novità del settore: dal 2023 sono la soluzione concreta per chi investe in un impianto di biometano e vuole trovare il miglior cliente sul mercato. Dopo l’ottimo riscontro da parte degli operatori, abbiamo deciso di investire per offrire un servizio migliore attraverso una piattaforma digitale che garantisca liquidità, affidabilità ed efficienza, nonché terzietà, scalabilità, autonomia ed accessibilità.',
       platformBody2:'A differenza di alcuni servizi che si limitano a far incontrare domanda e offerta, Fiordaliso non scambia contatti. Al contrario, i nominativi restano riservati e al centro c’è la gara, che ruota intorno ad un accordo che può durare anche 15 anni come la tariffa del GSE. È un processo organico che aiuta e protegge gli operatori nel contesto di regole chiare, includendo una gestione completa dei rischi finanziari.',
       platformDocs:[
         {k:'Bando', v:'Definisce l’oggetto della gara e le regole con cui si svolge.'},
@@ -495,13 +495,13 @@ class Component extends DCLogic {
       ],
       platformCallout:'È sufficiente analizzare le offerte di qualche potenziale acquirente? No: ogni offerta è diversa perchè costruita a partire dalle esigenze del cliente (che ha interessi diversi dal produttore) e non è detto che sia facile confrontarle. Senza dimenticare che l\'offerta si accompagna ad un vero e proprio term sheet, realizzato dai legali del cliente stesso. È sufficiente attendere l’offerta finale? No, perché nel frattempo le altre potrebbero scadere e l’Acquirente potrebbe aver sottoscritto il contratto con un altro Produttore. Con Fiordaliso le offerte sono richieste in base a parametri confrontabili e ad una tempistica definita già in partenza. Non lasciamo spazio all’improvvisazione.',
 
-      processKicker:'Il processo',
+      processKicker:'La piattaforma',
       processTitle:'Come si svolge una gara',
-      processIntro:'Il produttore ci fornisce i propri dati e noi predisponiamo i documenti che governano l’intero processo. Poi parte la gara, che indicativamente dura un mese e si articola in cinque passaggi.',
+      processIntro:'Il produttore inserisce i propri dati e la piattaforma genera i tre documenti che governano l’intero processo. Poi parte la gara, che indicativamente dura un mese e si articola in cinque passaggi.',
       processImgAlt:'Corridore ai blocchi di partenza',
       processCaption:'Ogni gara ha una partenza ordinata e regole uguali per tutti.',
       steps:[
-        {n:'01', t:'Creazione', d:'Raccogliamo i dati del produttore e avviamo la gara.', delay:'0'},
+        {n:'01', t:'Creazione', d:'Il produttore inserisce i dati e avvia la gara.', delay:'0'},
         {n:'02', t:'Offerta indicativa', d:'Gli acquirenti presentano le prime proposte, espresse come spread sull’indice di riferimento del biometano.', delay:'80'},
         {n:'03', t:'Short list', d:'Le offerte più interessanti vengono selezionate e chi le ha inviate viene invitato al secondo turno.', delay:'160'},
         {n:'04', t:'Offerta impegnativa', d:'I potenziali Acquirenti formalizzano la proposta definitiva, che consiste sostanzialmente in un rilancio verso l’alto.', delay:'240'},
@@ -515,7 +515,7 @@ class Component extends DCLogic {
         {n:'02', t:'Fondata su uno Studio', d:'Il processo di gara si è sviluppato a partire da un report dedicato al mercato del biometano, disponibile in calce.'},
         {n:'03', t:'Una community di riferimento', d:'Collegata all’unica community del mercato del biometano, con oltre 350 iscritti.'},
         {n:'04', t:'Un modello già provato', d:'Attivo e con risultati positivi dal 2023.'},
-        {n:'05', t:'Documenti su misura', d:'Bando, capitolato e term sheet predisposti per ogni gara.'},
+        {n:'05', t:'Documenti automatici', d:'Bando, capitolato e term sheet pronti dall’inserimento dei dati.'},
         {n:'06', t:'Rischio sotto controllo', d:'Ogni variabile finanziaria gestita in modo consapevole.'}
       ],
 
@@ -552,7 +552,7 @@ class Component extends DCLogic {
       contactBody:'Raccontaci le tue esigenze di acquisto e/o vendita. Scegli il tuo accesso: ti mostriamo come Fiordaliso può portare la tua operazione in gara.',
       access:[
         {tag:'Produttori', t:'Vendi il tuo biometano', d:'Gassoso o liquido, decreto 18 o 22, garanzia di origine per il trasporto o altri usi: portiamo il tuo prodotto in gara con un percorso seguito passo dopo passo.', cta:'Sono un Produttore', action:this.mailProducer},
-        {tag:'Acquirenti', t:'Acquista alle migliori condizioni', d:'Accedi per cogliere opportunità non disponibili altrove, attraverso un processo semplice che ti permette concretamente di acquisire il biometano che ti serve.', cta:'Sono un Acquirente', action:this.mailBuyer}
+        {tag:'Acquirenti', t:'Acquista alle migliori condizioni', d:'Accedi per cogliere opportunità non disponibili fuori dalla piattaforma, attraverso un processo semplice che ti permette concretamente di acquisire il biometano che ti serve.', cta:'Sono un Acquirente', action:this.mailBuyer}
       ],
       resourcesLabel:'Risorse e community',
       resources:[
@@ -600,11 +600,11 @@ class Component extends DCLogic {
       }
     },
     en: {
-      nav: { about:'About us', values:'Values', platform:'Tenders', numbers:'Numbers', founder:'Founder', contact:'Contact' },
+      nav: { about:'About us', values:'Values', platform:'Platform', numbers:'Numbers', founder:'Founder', contact:'Contact' },
       heroEyebrow:'Fiordaliso Business Development',
-      heroTitle:'We bring biomethane to tender',
+      heroTitle:'Biomethane tenders evolve into a platform',
       heroSub:'Twenty years of experience in natural gas and five in biomethane, at the service of market operators. From drafting the tender notice to closing the auction, every offer follows an orderly, transparent and protected path. Producers and Buyers are supported at every stage.',
-      heroCta1:'Discover the tenders', heroCta2:'Talk to us', scroll:'Scroll',
+      heroCta1:'Discover the platform', heroCta2:'Talk to us', scroll:'Scroll',
 
       aboutKicker:'About us',
       aboutTitle:'Experience in natural gas that becomes method for biomethane',
@@ -625,9 +625,9 @@ class Component extends DCLogic {
       whyBody2:'The choice of the name Fiordaliso answers two impulses: the pleasure of recalling the affectionate presence of the grandparents, and the firm will to repeat that successful entrepreneurial experience — again starting from nothing, relying only on intuition, determination and perseverance.',
       whyCaption:'The Fiordaliso hotel — Bardolino (VR), Lake Garda.',
 
-      platformKicker:'The tenders',
+      platformKicker:'The platform',
       platformTitle:'Selling biomethane becomes a structured tender',
-      platformBody1:'Biomethane tenders are the true novelty of the sector: since 2023 they are the concrete solution for those investing in a biomethane plant who want to find the best buyer on the market. After an excellent response from operators, we invested to offer a better service that guarantees liquidity, reliability and efficiency, as well as impartiality, scalability, autonomy and accessibility.',
+      platformBody1:'Biomethane tenders are the true novelty of the sector: since 2023 they are the concrete solution for those investing in a biomethane plant who want to find the best buyer on the market. After an excellent response from operators, we invested to offer a better service through a digital platform that guarantees liquidity, reliability and efficiency, as well as impartiality, scalability, autonomy and accessibility.',
       platformBody2:'Unlike services that merely match supply and demand, Fiordaliso does not trade contacts. Names stay confidential and the tender is what matters — revolving around an agreement that can last up to 15 years, like the GSE tariff. It is an organic process that helps and protects operators within clear rules, including complete management of financial risk.',
       platformDocs:[
         {k:'Tender notice', v:'Sets out the subject of the tender and the rules it runs by.'},
@@ -636,13 +636,13 @@ class Component extends DCLogic {
       ],
       platformCallout:'Is it enough to analyse the offers of a few potential buyers? No: every offer is different, because it is built around the needs of the customer (whose interests differ from the producer’s), and comparing them is not necessarily easy. Not to mention that the offer comes with a fully-fledged term sheet, drawn up by the customer’s own lawyers. Is it enough to wait for the final offer? No, because meanwhile the others may expire and the Buyer may already have signed a contract with another Producer. With Fiordaliso, offers are requested on comparable parameters and to a timeline defined from the outset. We leave no room for improvisation.',
 
-      processKicker:'The process',
+      processKicker:'The platform',
       processTitle:'How a tender unfolds',
-      processIntro:'The producer provides their data and we prepare the documents that govern the entire process. Then the tender begins — lasting roughly a month and unfolding in five steps.',
+      processIntro:'The producer enters their data and the platform generates the three documents that govern the entire process. Then the tender begins — lasting roughly a month and unfolding in five steps.',
       processImgAlt:'Runner at the starting blocks',
       processCaption:'Every tender has an orderly start and the same rules for all.',
       steps:[
-        {n:'01', t:'Creation', d:'We collect the producer’s data and launch the tender.', delay:'0'},
+        {n:'01', t:'Creation', d:'The producer enters the data and launches the tender.', delay:'0'},
         {n:'02', t:'Indicative offer', d:'Buyers submit their first proposals, expressed as a spread over the biomethane reference index.', delay:'80'},
         {n:'03', t:'Short list', d:'The most interesting offers are selected and their senders invited to the second round.', delay:'160'},
         {n:'04', t:'Binding offer', d:'Potential buyers formalise their final proposal — essentially a raise upwards.', delay:'240'},
@@ -656,7 +656,7 @@ class Component extends DCLogic {
         {n:'02', t:'Built on a Study', d:'The tender process was developed starting from a report dedicated to the biomethane market, available below.'},
         {n:'03', t:'A reference community', d:'Linked to the only biomethane-market community, with over 350 members.'},
         {n:'04', t:'An already-tested model', d:'Active, with positive results since 2023.'},
-        {n:'05', t:'Tailored documents', d:'Tender notice, specifications and term sheet prepared for every tender.'},
+        {n:'05', t:'Automatic documents', d:'Tender notice, specifications and term sheet ready as soon as the data is entered.'},
         {n:'06', t:'Risk under control', d:'Every financial variable managed consciously.'}
       ],
 
@@ -693,7 +693,7 @@ class Component extends DCLogic {
       contactBody:'Tell us about your purchase and/or sale needs. Choose your entry point: we’ll show you how Fiordaliso can bring your operation to tender.',
       access:[
         {tag:'Producers', t:'Sell your biomethane', d:'Gaseous or liquid, decree 18 or 22, guarantee of origin for transport or other uses: we bring your product to tender on a path followed step by step.', cta:'I’m a Producer', action:this.mailProducer},
-        {tag:'Buyers', t:'Buy on the best terms', d:'Get access to opportunities not available elsewhere, through a simple process that lets you actually secure the biomethane you need.', cta:'I’m a Buyer', action:this.mailBuyer}
+        {tag:'Buyers', t:'Buy on the best terms', d:'Get access to opportunities not available outside the platform, through a simple process that lets you actually secure the biomethane you need.', cta:'I’m a Buyer', action:this.mailBuyer}
       ],
       resourcesLabel:'Resources & community',
       resources:[
